@@ -1,0 +1,326 @@
+:root {
+  --sz: 5px; /*** size ***/
+  --sp: 10s; /*** speed ***/
+  --b1: #3c3532;
+  --b2: #1c1b18;
+  --b3: #0c0b0a;
+  --b4: #0c0b0ae0;
+  --c1: #e399ff;
+  --ts: 50% / calc(var(--sz) * 17.5) calc(var(--sz) * 29.5);
+
+  --color-white: #fff;
+  --color-grey: #c4c4c4;
+}
+
+/* CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Dosis", sans-serif;
+}
+
+/* End CSS Reset */
+
+/* Background */
+.container-background {
+  height: 100vh;
+  background:
+          /* black shadows */ radial-gradient(
+        circle at 50% 50%,
+        var(--b4) calc(var(--sz) * 1),
+        #fff0 calc(var(--sz) * 8)
+      )
+      var(--ts),
+    radial-gradient(
+        circle at 0% 0%,
+        var(--b4) calc(var(--sz) * 1),
+        #fff0 calc(var(--sz) * 8)
+      )
+      var(--ts),
+    radial-gradient(
+        circle at 0% 100%,
+        var(--b4) calc(var(--sz) * 1),
+        #fff0 calc(var(--sz) * 8)
+      )
+      var(--ts),
+    radial-gradient(
+        circle at 100% 0%,
+        var(--b4) calc(var(--sz) * 1),
+        #fff0 calc(var(--sz) * 8)
+      )
+      var(--ts),
+    radial-gradient(
+        circle at 100% 100%,
+        var(--b4) calc(var(--sz) * 1),
+        #fff0 calc(var(--sz) * 8)
+      )
+      var(--ts),
+    /* border bottom */
+      conic-gradient(
+        from 90deg at 97.5% 67%,
+        var(--c1) 0 87.5deg,
+        #fff0 88deg 100%
+      )
+      var(--ts),
+    /*repeated*/
+      conic-gradient(
+        from 90deg at 97.5% 67%,
+        var(--c1) 0 87.5deg,
+        #fff0 88deg 100%
+      )
+      var(--ts),
+    conic-gradient(
+        from 182.5deg at 2.5% 67%,
+        #fff0 0 0deg,
+        var(--c1) 0.5deg 90deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    /*repeated*/
+      conic-gradient(
+        from 182.5deg at 2.5% 67%,
+        #fff0 0 0deg,
+        var(--c1) 0.5deg 90deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    /* border top */
+      conic-gradient(
+        from 270deg at 2.5% 33%,
+        var(--c1) 0 87.5deg,
+        #fff0 88deg 100%
+      )
+      var(--ts),
+    /*repeated*/
+      conic-gradient(
+        from 270deg at 2.5% 33%,
+        var(--c1) 0 87.5deg,
+        #fff0 88deg 100%
+      )
+      var(--ts),
+    conic-gradient(
+        from 2.5deg at 97.5% 33%,
+        #fff0 0 0deg,
+        var(--c1) 0.5deg 90deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    /*repeated*/
+      conic-gradient(
+        from 2.5deg at 97.5% 33%,
+        #fff0 0 0deg,
+        var(--c1) 0.5deg 90deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    /* bottom */
+      conic-gradient(
+        from 116.5deg at 50% 85.5%,
+        var(--b1) 0 127deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    /*repeated*/
+      conic-gradient(
+        from 116.5deg at 50% 85.5%,
+        var(--b1) 0 127deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    /*repeated*/
+      conic-gradient(
+        from 116.5deg at 50% 85.5%,
+        var(--b1) 0 127deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    conic-gradient(from 120deg at 50% 83%, var(--c1) 0 120deg, #fff0 0 100%)
+      var(--ts),
+    /* top */
+      conic-gradient(
+        from -63.5deg at 50% 14.5%,
+        var(--b1) 0 127deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    /*repeated*/
+      conic-gradient(
+        from -63.5deg at 50% 14.5%,
+        var(--b1) 0 127deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    /*repeated*/
+      conic-gradient(
+        from -63.5deg at 50% 14.5%,
+        var(--b1) 0 127deg,
+        #fff0 0 100%
+      )
+      var(--ts),
+    conic-gradient(from -60deg at 50% 17%, var(--c1) 0 120deg, #fff0 0 100%)
+      var(--ts),
+    /* central gradient */
+      conic-gradient(
+        from 0deg at 50% 50%,
+        #fff0 0 2deg,
+        var(--b2) 2.5deg 57.5deg,
+        #fff0 58deg 62.5deg,
+        var(--b1) 63deg 117.5deg,
+        #fff0 118deg 122.5deg,
+        var(--b3) 123deg 177.5deg,
+        #fff0 178deg 182deg,
+        var(--b2) 182.5deg 237.5deg,
+        #fff0 0 242.5deg,
+        var(--b1) 243deg 297.5deg,
+        #fff0 298deg 302.5deg,
+        var(--b3) 303deg 357.5deg,
+        #fff0 358deg 360deg
+      )
+      var(--ts),
+    /* bg */ var(--c1);
+  animation: colors var(--sp) linear 0s infinite;
+}
+
+@keyframes colors {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+
+/* End Background */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  width: 35rem;
+  height: 41.2rem;
+  overflow: hidden;
+  background-color: var(--color-white);
+  box-shadow: 0.3rem 0.3rem 0.5rem rgb(255, 255, 255, .5);
+}
+
+
+
+.top {
+  height: 10rem;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #e5e5f7 10px
+    ),
+    repeating-linear-gradient(#444cf755, #444cf7);
+}
+
+.middle{
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -6rem;
+  z-index: 1;
+  padding: 0 2rem;
+}
+
+.pic {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  border: 0.4rem solid var(--color-white);
+}
+
+/* .title{
+  font-size: 2.2rem;
+} */
+
+.profession{
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.content{
+  height: 6rem;
+}
+
+.bottom{
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 0 1rem;
+  padding: 2rem;
+  border-top: 2px solid var(--color-grey);
+}
+
+.icon{
+  width: 4rem;
+  height: 4rem;
+  transition:transform 0.3s ease;
+}
+
+.icon:hover{
+transform: scale(1.2);
+}
+
+.lang_button{
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-white);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: .5rem;
+  transition: 0.3s;
+}
+
+.lang_button:hover{
+  background-color:#008b8b;
+  color: var(--color-white);
+}
