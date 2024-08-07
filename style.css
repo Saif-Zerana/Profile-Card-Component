@@ -310,7 +310,7 @@ transform: scale(1.2);
 
 .lang_button{
   position: absolute;
-  top: 85%;
+  top: 58rem;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--color-white);
