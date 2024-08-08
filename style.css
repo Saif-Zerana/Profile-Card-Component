@@ -221,8 +221,6 @@ body {
   }
 }
 
-
-
 /* End Background */
 
 .container {
@@ -236,6 +234,47 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.lights-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  top: 2rem;
+  color: #fff;
+}
+
+.light-label {
+  width: 4.2rem;
+  height: 2.2rem;
+  border-radius: 1.5rem;
+  background-color: var(--color-white);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 0.3rem 0.4rem;
+}
+
+.light-label::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: #000;
+  transition: 0.3s;
+}
+
+.light-input {
+  display: none;
+}
+
+.light-input:checked + .light-label {
+  background-color:#008b8b;
+}
+.light-input:checked + .light-label::after {
+  transform: translateX(2.1rem);
+  background-color: var(--color-white);
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -244,10 +283,39 @@ body {
   height: 41.2rem;
   overflow: hidden;
   background-color: var(--color-white);
-  box-shadow: 0.3rem 0.3rem 0.5rem rgb(255, 255, 255, .5);
+  box-shadow: 0.3rem 0.3rem 0.5rem rgb(255, 255, 255, 0.5);
 }
 
+.lights {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+  transition: all 0.3s;
+}
 
+.bulb-odd {
+  animation: party 0.5s infinite alternate;
+}
+.bulb-even {
+  animation: party 0.5s infinite reverse;
+}
+
+@keyframes party {
+  from {
+    fill: #ff1111;
+  }
+
+  to {
+    fill: #f3ea19;
+  }
+}
+
+.container:has(.light-input:checked) .lights {
+  /* display: block; */
+  opacity: 1;
+  visibility: visible;
+}
 
 .top {
   height: 10rem;
@@ -261,7 +329,7 @@ body {
     repeating-linear-gradient(#444cf755, #444cf7);
 }
 
-.middle{
+.middle {
   margin: 0 auto;
   text-align: center;
   margin-top: -6rem;
@@ -280,16 +348,16 @@ body {
   font-size: 2.2rem;
 } */
 
-.profession{
+.profession {
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 
-.content{
+.content {
   height: 6rem;
 }
 
-.bottom{
+.bottom {
   display: flex;
   justify-content: center;
   margin-top: 3rem;
@@ -298,17 +366,17 @@ body {
   border-top: 2px solid var(--color-grey);
 }
 
-.icon{
+.icon {
   width: 4rem;
   height: 4rem;
-  transition:transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-.icon:hover{
-transform: scale(1.2);
+.icon:hover {
+  transform: scale(1.2);
 }
 
-.lang_button{
+.lang_button {
   position: absolute;
   top: 58rem;
   left: 50%;
@@ -316,11 +384,11 @@ transform: scale(1.2);
   background-color: var(--color-white);
   padding: 1rem 2rem;
   cursor: pointer;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   transition: 0.3s;
 }
 
-.lang_button:hover{
-  background-color:#008b8b;
+.lang_button:hover {
+  background-color: #008b8b;
   color: var(--color-white);
 }
