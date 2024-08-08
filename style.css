@@ -397,4 +397,7 @@ body {
   .lang_button {
     top: 95%;
   }
+  .lights-control {
+    top: 10%;
+  }
 }
