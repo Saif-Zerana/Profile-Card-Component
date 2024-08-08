@@ -378,7 +378,7 @@ body {
 
 .lang_button {
   position: absolute;
-  top: 580px;
+  top: 58rem;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--color-white);
@@ -391,6 +391,15 @@ body {
 .lang_button:hover {
   background-color: #008b8b;
   color: var(--color-white);
+}
+
+@media (max-width: 800px){
+  .lang_button {
+    top: 95%;
+  }
+  .lights-control {
+    top: 5%;
+  }
 }
 
 @media (max-width: 500px) {
