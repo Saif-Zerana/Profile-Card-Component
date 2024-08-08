@@ -394,7 +394,7 @@ body {
 }
 
 @media (max-width: 500px){
-  .container{
-    height: 510px;
-  }
+.lang_button{
+  top: 520px;
+}
 }
