@@ -268,7 +268,7 @@ body {
 }
 
 .light-input:checked + .light-label {
-  background-color:#008b8b;
+  background-color: #008b8b;
 }
 .light-input:checked + .light-label::after {
   transform: translateX(2.1rem);
@@ -393,8 +393,8 @@ body {
   color: var(--color-white);
 }
 
-@media (max-width: 500px){
-.lang_button{
-  top: 520px;
-}
+@media (max-width: 500px) {
+  .lang_button {
+    top: 95%;
+  }
 }
