@@ -239,7 +239,7 @@ body {
   align-items: center;
   gap: 1rem;
   position: absolute;
-  top: 2rem;
+  top: 20px;
   color: #fff;
 }
 
@@ -378,7 +378,7 @@ body {
 
 .lang_button {
   position: absolute;
-  top: 58rem;
+  top: 580px;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--color-white);
