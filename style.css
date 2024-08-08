@@ -392,3 +392,9 @@ body {
   background-color: #008b8b;
   color: var(--color-white);
 }
+
+@media (max-width: 500px){
+  .container{
+    height: 510px;
+  }
+}
