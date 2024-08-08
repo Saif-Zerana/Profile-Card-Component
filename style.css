@@ -395,7 +395,7 @@ body {
 
 @media (max-width: 500px) {
   .lang_button {
-    top: 95%;
+    top: 90%;
   }
   .lights-control {
     top: 10%;
