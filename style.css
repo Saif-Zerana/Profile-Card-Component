@@ -378,7 +378,7 @@ body {
 
 .lang_button {
   position: absolute;
-  top: 58rem;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--color-white);
